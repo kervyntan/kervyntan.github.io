@@ -1,4 +1,10 @@
-import "./styles.css";
+import "./assets/styles.css";
+import React from "react";
+import { BrowserRouter, Routes, Switch } from "react-router-dom";
+import Navbar from "./shared/Navbar";
+import AboutOnLanding from "./components/AboutOnLanding";
+import Hero from "./components/Hero";
+import WorksOnLanding from "./components/WorksOnLanding";
 
 export default function App() {
   return (

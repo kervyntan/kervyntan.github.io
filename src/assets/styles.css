@@ -1,0 +1,81 @@
+/* dm-sans-regular - latin */
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/dm-sans-v11-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/dm-sans-v11-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/dm-sans-v11-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/dm-sans-v11-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/dm-sans-v11-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/dm-sans-v11-latin-regular.svg#DMSans") format("svg"); /* Legacy iOS */
+}
+/* dm-sans-500 - latin */
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/dm-sans-v11-latin-500.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/dm-sans-v11-latin-500.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/dm-sans-v11-latin-500.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/dm-sans-v11-latin-500.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/dm-sans-v11-latin-500.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/dm-sans-v11-latin-500.svg#DMSans")
+      format("svg"); /* Legacy iOS */
+}
+/* dm-sans-700 - latin */
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/dm-sans-v11-latin-700.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/dm-sans-v11-latin-700.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/dm-sans-v11-latin-700.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/dm-sans-v11-latin-700.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/dm-sans-v11-latin-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/dm-sans-v11-latin-700.svg#DMSans")
+      format("svg"); /* Legacy iOS */
+}
+
+:root {
+  --clr-primary-btn-landing: hsl(194 77% 80%);
+  --clr-bg-start: hsl(187 77% 78%);
+  --clr-bg-end: hsl(217 82% 87%);
+  --clr-primary-text: hsl(200 79% 82%);
+  --clr-primary-gray-text: hsl(0 0% 49%);
+  --clr-primary-about-me-btn: hsl(198 79% 81%);
+  --clr-primary-works-btn: hsl(210 81% 85%);
+  --clr-primary-reach-me-btn: hsl(214 82% 86%);
+}
+
+* {
+  font-family: DM Sans;
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: linear-gradient(#2fb5c8, #286ede);
+  /* must add this otherwise there is background propogation */
+  min-height: 100vh;
+}
