@@ -4,7 +4,7 @@ import Button from "../shared/Button";
 const Hero = (props) => {
   const onClickHandler = () => {};
   return (
-    <div className="hero">
+    <div className="hero fader">
       <div className="hero-text">
         <h2> Lorem ipsum dolor sit amet. </h2>
         <Button
