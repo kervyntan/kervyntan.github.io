@@ -6,7 +6,7 @@ import Button from "../shared/Button";
 const AboutOnLanding = () => {
   const onClickHandler = () => {};
   return (
-    <div className="about fader fade-left">
+    <div className="about__landing fader fade-left">
       <div className="cloud-and-sun">
         <img className="cloud" src={cloud} alt="cloud" />
         <img className="sun" src={sun} alt="sun" />

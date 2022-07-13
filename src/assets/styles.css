@@ -61,6 +61,7 @@
   --clr-primary-about-me-btn: hsl(198 79% 81%);
   --clr-primary-works-btn: hsl(210 81% 85%);
   --clr-primary-reach-me-btn: hsl(214 82% 86%);
+  --clr-git-branch: rgb(177, 181, 195);
 }
 
 html {
@@ -128,6 +129,10 @@ h3 {
 
 .sun {
   width: 40px;
+}
+
+.center {
+  text-align: center;
 }
 
 h2,
@@ -208,7 +213,7 @@ ul li {
   margin: 6px 0;
 }
 
-a {
+.nav-list a {
   color: var(--clr-text);
 }
 
@@ -231,7 +236,7 @@ a {
   font-weight: 500;
   margin-top: 1.5rem;
   width: fit-content;
-  padding-inline: 5rem;
+  padding-inline: 4rem;
 }
 
 .hero-img {
@@ -242,8 +247,8 @@ a {
   outline: 3px solid red;
 } */
 
-/* About-me */
-.about {
+/* About-me Landing */
+.about__landing {
   margin-top: 3rem;
   position: relative;
 }
@@ -418,6 +423,44 @@ li:hover {
   text-align: center;
   letter-spacing: 0.02rem;
 }
+
+/* About Page */
+.git__branch__container {
+  text-align: left;
+}
+
+.git__person {
+  margin-left: 3rem;
+}
+
+.git__branch {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 3.5rem;
+  width: 1px;
+  background: var(--clr-git-branch);
+}
+
+.fifty {
+  height: 50px;
+}
+
+.about__section__one {
+  display: flex;
+  border: 1px solid var(--clr-git-branch);
+  border-radius: 15px;
+  padding: 2rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+.about__section__one__text__para {
+  margin-top: 1rem;
+  text-align: left;
+  max-width: 450px;
+  color: var(--clr-text);
+}
+
 /* Animation */
 
 @keyframes risingSun {
@@ -458,6 +501,38 @@ li:hover {
 @media (max-width: 768px) {
   .nav-list-item {
     display: none;
+  }
+
+  .navbar,
+  .nav-list {
+    gap: 0;
+  }
+
+  .logo .cloud {
+    width: 8rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    order: 2;
+  }
+
+  .about,
+  .works,
+  .reachme__section {
+    text-align: center;
+  }
+
+  .about__image-with-text {
+    flex-direction: column;
+  }
+
+  .btn {
+    padding-inline: 3rem;
   }
 }
 

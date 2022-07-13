@@ -1,6 +1,6 @@
 import "./assets/styles.css";
 import React, { useState, useEffect, useRef } from "react";
-// import cloud from "./assets/cloud.png";
+import cloud from "./assets/cloud.png";
 // import technology from "./assets/technology.png";
 // import reactIcon from "./assets/react-icon.png";
 // import sun from "./assets/sun.png";
@@ -50,12 +50,19 @@ export default function App() {
   return (
     <Router>
       <div className="container">
+        <Navbar
+          img={cloud}
+          firstItem="About"
+          secondItem="Portfolio"
+          thirdItem="Contact"
+        />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Hero />} />
           {/* <Route path="/about" element={<About />} /> */}
         </Routes>
+        <Footer />
       </div>
       {/* <Routes>
         <Route path="/" element={<Home />} />

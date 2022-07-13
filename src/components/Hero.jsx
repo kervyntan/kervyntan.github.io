@@ -15,7 +15,7 @@ const Hero = (props) => {
         />
       </div>
       <div className="hero-img">
-        <img src={props.img} />
+        <img alt="technology-icon" src={props.img} />
       </div>
     </div>
   );
