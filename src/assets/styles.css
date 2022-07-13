@@ -208,6 +208,10 @@ ul li {
   margin: 6px 0;
 }
 
+a {
+  color: var(--clr-text);
+}
+
 /* hero */
 .hero {
   display: flex;

@@ -65,7 +65,7 @@ const ReachMe = () => {
           value={toSend.reply_to}
           onChange={handleChange}
         /> */}
-        <Button type="submit" className="btn btn-form" text="Submit" />
+        <Button type="submit" className="btn btn-form" text="Send Email!" />
       </form>
     </div>
   );

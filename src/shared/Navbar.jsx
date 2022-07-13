@@ -1,5 +1,7 @@
 import React from "react";
-import { BrowserRouter, Routes, Switch } from "react-router-dom";
+import About from "../components/About";
+import Hero from "../components/Hero";
+import { BrowserRouter as Router, Routes, Link, Route } from "react-router-dom";
 
 const Navbar = (props) => {
   const showHamburger = () => {
@@ -18,20 +20,22 @@ const Navbar = (props) => {
       <div className="logo">
         {/* props.img in the future */}
         {/* <h1> KERVYN </h1> */}
-        <img className="cloud" src={props.img} alt="logo" />
+        <Link to="/">
+          <img className="cloud" src={props.img} alt="logo" />
+        </Link>
       </div>
 
       <ul className="nav-list">
         {/* change to routes  */}
-        <a href="#">
-          <li className="nav-list-item"> {props.firstItem} </li>
-        </a>
-        <a href="#">
-          <li className="nav-list-item"> {props.secondItem} </li>
-        </a>
-        <a href="#">
-          <li className="nav-list-item"> {props.thirdItem} </li>
-        </a>
+        <li className="nav-list-item">
+          <Link to="/about"> {props.firstItem} </Link>
+        </li>
+        <li className="nav-list-item">
+          <Link to="/portfolio"> {props.secondItem} </Link>
+        </li>
+        <li className="nav-list-item">
+          <Link to="/contact"> {props.thirdItem} </Link>
+        </li>
       </ul>
 
       <div className="hamburger" onClick={showHamburger}>
@@ -47,15 +51,15 @@ const Navbar = (props) => {
               <div className="hamb"></div>
               <div className="hamb"></div>
             </div>
-            <a href="#">
-              <li className="nav-list-hamb-item"> {props.firstItem} </li>
-            </a>
-            <a href="#">
-              <li className="nav-list-hamb-item"> {props.secondItem} </li>
-            </a>
-            <a href="#">
-              <li className="nav-list-hamb-item"> {props.thirdItem} </li>
-            </a>
+            <li className="nav-list-hamb-item">
+              <Link to="/about"> {props.firstItem} </Link>
+            </li>
+            <li className="nav-list-hamb-item">
+              <Link to="/portfolio"> {props.secondItem} </Link>
+            </li>
+            <li className="nav-list-hamb-item">
+              <Link to="/contact"> {props.thirdItem} </Link>
+            </li>
           </ul>
         </div>
       </div>

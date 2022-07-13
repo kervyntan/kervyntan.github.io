@@ -8,7 +8,7 @@ import HTML from "../assets/html5.png";
 const WorksOnLanding = ({ works }) => {
   const loopSkills = (item, index) => {
     return (
-      <div className="skill">
+      <div key={item.skill} className="skill">
         <img width="20" src={require(item.path)} alt={item.skill} />
         <p className="skill__para"> {item.skill} </p>
       </div>
@@ -17,7 +17,7 @@ const WorksOnLanding = ({ works }) => {
 
   const loopWork = (item, index) => {
     return (
-      <div className="works__container">
+      <div key={item.title} className="works__container">
         <div className="skills">{item.skills.map(loopSkills)}</div>
         <div className="works__title"> {item.title} </div>
         {/* <div className="works__img"> </div> */}
