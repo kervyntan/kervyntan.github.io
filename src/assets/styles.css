@@ -430,8 +430,13 @@ li:hover {
   text-align: left;
 }
 
-.git__person {
+.git-person {
   margin-left: 3rem;
+}
+
+.circle,
+.experience-svg {
+  margin-left: 2.5rem;
 }
 
 .git__branch {
@@ -485,6 +490,10 @@ li:hover {
   margin-left: 1rem;
 }
 
+.ml-0 {
+  margin-left: 0;
+}
+
 .git-curve {
   padding-right: 1px;
 }
@@ -503,10 +512,6 @@ li:hover {
 .git__branch__circle {
   /* margin-left: 2.5rem; */
   gap: 1rem;
-}
-
-.circle {
-  margin-left: 2.5rem;
 }
 
 .git__branch__circle__straight {

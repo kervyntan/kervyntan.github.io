@@ -1,16 +1,13 @@
 import React from "react";
 import sun from "../assets/sun.png";
-import cloud from "../assets/cloud.png";
 import Button from "../shared/Button";
+import CloudAndSun from "../shared/CloudAndSun";
 
 const AboutOnLanding = () => {
   const onClickHandler = () => {};
   return (
     <div className="about__landing fader fade-left">
-      <div className="cloud-and-sun">
-        <img className="cloud" src={cloud} alt="cloud" />
-        <img className="sun" src={sun} alt="sun" />
-      </div>
+      <CloudAndSun />
       <div className="about__heading">
         <h2> About Me </h2>
       </div>
