@@ -523,6 +523,8 @@ li:hover {
 
 .git__branch__circle__right__para {
   color: var(--clr-text);
+  margin-left: 2rem;
+  animation: textFadeIn 0.5s ease-in forwards;
 }
 
 /* .btn:is(.skill),
@@ -554,11 +556,13 @@ input[type="radio"] {
 
 label {
   display: inline-block;
+  width: 100%;
   background: transparent;
   border: 1px solid var(--clr-text);
   padding-block: 0.5rem;
   padding-inline: 1.5rem;
   border-radius: 2rem;
+  /* margin-right : 1rem; */
   cursor: pointer;
 }
 
@@ -602,6 +606,16 @@ input:checked + label {
 
   100% {
     transform: translateX(0);
+  }
+}
+
+@keyframes textFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 

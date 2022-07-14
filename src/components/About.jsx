@@ -10,6 +10,9 @@ const About = () => {
   // onClick -> should:
   // 1. add a class to allow for inputto be white
   // 2. appropriate text should fade in for the specific skill
+
+  // storing value of each skill in 1 state
+  // update each value as true or false
   const [skillChecked, setSkillChecked] = useState({
     "1": true,
     "2": false,
@@ -27,7 +30,6 @@ const About = () => {
   //   }
   // }
   const showSkillHandler = (e) => {
-    console.log(e.target.checked);
     if (e.target.checked) {
       // if (e.target.id === "skill 1") {
       //   setSkillOneChecked(!skillOneChecked);
