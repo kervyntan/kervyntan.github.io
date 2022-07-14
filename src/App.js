@@ -6,7 +6,7 @@ import cloud from "./assets/cloud.png";
 // import sun from "./assets/sun.png";
 // import webdev from "./assets/web-dev.png";
 // import networkIcon from "./assets/network-icon.png";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./shared/Navbar";
 import AboutOnLanding from "./components/AboutOnLanding";
 import Hero from "./components/Hero";
