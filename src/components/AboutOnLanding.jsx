@@ -8,16 +8,18 @@ const AboutOnLanding = () => {
   return (
     <div className="about__landing fader fade-left">
       <CloudAndSun />
-      <div className="about__heading">
+      <div className="about__landing__heading">
         <h2> About Me </h2>
       </div>
-      <div className="about__image-with-text">
-        <div className="about__image">
+      <div className="about__landing__image-with-text">
+        <div className="about__landing__image">
           <img src={sun} alt="sun" />
         </div>
-        <div className="about__text">
-          <h3 className="about__text__heading">Lorem ipsum dolor sit amet. </h3>
-          <p className="about__text__para">
+        <div className="about__landing__text">
+          <h3 className="about__landing__text__heading">
+            Lorem ipsum dolor sit amet.{" "}
+          </h3>
+          <p className="about__landing__text__para">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
             laboriosam ullam perferendis inventore ducimus, delectus commodi
             voluptatibus rem culpa, quo assumenda iure voluptate possimus
@@ -25,7 +27,7 @@ const AboutOnLanding = () => {
           </p>
         </div>
       </div>
-      <div className="about__btn">
+      <div className="about__landing__btn">
         <Button
           type="submit"
           className="btn btn-about"

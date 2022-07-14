@@ -5,7 +5,7 @@ const Hero = (props) => {
   const onClickHandler = () => {};
   return (
     <div className="hero fader">
-      <div className="hero-text">
+      <div className="hero__text">
         <h2> Lorem ipsum dolor sit amet. </h2>
         <Button
           type="submit"
@@ -14,7 +14,7 @@ const Hero = (props) => {
           text="Lorem ipsum"
         />
       </div>
-      <div className="hero-img">
+      <div className="hero__img">
         <img alt="technology-icon" src={props.img} />
       </div>
     </div>

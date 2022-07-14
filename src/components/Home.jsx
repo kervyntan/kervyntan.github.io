@@ -2,16 +2,14 @@ import React, { useState, useEffect, useRef } from "react";
 import AboutOnLanding from "./AboutOnLanding";
 import Hero from "./Hero";
 import WorksOnLanding from "./WorksOnLanding";
-// import Navbar from "../shared/Navbar";
-// import Footer from "../shared/Footer";
 import ReachMe from "../shared/ReachMe";
 import technology from "../assets/technology.png";
-// import cloud from "../assets/cloud.png";
 
 const Home = () => {
   let path = "./data/data.json";
   const works = useRef(null);
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     fetch(path)
       .then((res) => res.json())

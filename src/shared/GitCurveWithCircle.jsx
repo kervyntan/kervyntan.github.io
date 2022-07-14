@@ -1,6 +1,8 @@
 import React from "react";
 import GitCurve from "./GitCurve";
 import GitCurveReversedSVG from "./GitCurveReversedSVG";
+import GitBranch from "./GitBranch";
+import Circle from "./Circle";
 
 const GitCurveWithCircle = () => {
   return (
@@ -11,8 +13,8 @@ const GitCurveWithCircle = () => {
           <GitCurve />
           <div className="git__branch__circle flex">
             <div className="git__branch__circle__left">
-              <div className="circle"></div>
-              <div className="git__branch__circle__straight hundred"></div>
+              <Circle />
+              <GitBranch className="hundred git-straight" />
               <GitCurveReversedSVG />
             </div>
           </div>

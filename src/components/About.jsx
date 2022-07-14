@@ -8,6 +8,8 @@ import GitCurve from "../shared/GitCurve";
 import GitCurveReversedSVG from "../shared/GitCurveReversedSVG";
 import PersonSVG from "../shared/PersonSVG";
 import ExperienceSVG from "../shared/ExperienceSVG";
+import GitBranch from "../shared/GitBranch";
+import Circle from "../shared/Circle";
 
 const About = () => {
   // onClickHandler to display text about skill
@@ -133,24 +135,24 @@ const About = () => {
       </div>
 
       <div className="git__branch__container">
-        <div className="git__branch fifty"> </div>
+        <GitBranch className="fifty" />
         <PersonSVG />
-        <h2 className="git__branch__content__heading"> Skills </h2>
+        <h2 className="git__branch__container__content__heading"> Skills </h2>
       </div>
 
       <div className="git__branch__container flex">
-        <div className="git__branch two-hundred"> </div>
-        <div className="git__branch__content">
+        <GitBranch className="two-hundred" />
+        <div className="git__branch__container__content">
           <div className="git__curve">
             <GitCurve />
-            <div className="git__branch__circle flex">
-              <div className="git__branch__circle__left">
-                <div className="circle"></div>
-                <div className="git__branch__circle__straight hundred"></div>
+            <div className="git__branch__container__circle flex">
+              <div className="git__branch__container__circle__left">
+                <Circle />
+                <GitBranch className="hundred git-straight" />
                 <GitCurveReversedSVG />
               </div>
 
-              <div className="git__branch__circle__center">
+              <div className="git__branch__container__circle__middle">
                 {/* <div className="skill one"></div>
                 <div className="skill two"></div>
                 <div className="skill three"></div>
@@ -216,7 +218,9 @@ const About = () => {
 
       <div className="git__branch__container">
         <ExperienceSVG />
-        <h2 className="git__branch__content__heading ml-0"> Experiences </h2>
+        <h2 className="git__branch__container__content__heading ml-0">
+          Experiences
+        </h2>
       </div>
 
       <GitCurveWithCircle />

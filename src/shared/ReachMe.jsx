@@ -56,7 +56,7 @@ const ReachMe = () => {
           placeholder="Message"
           value={toSend.message}
           onChange={handleChange}
-          className="reachme__section__form__input__last"
+          className="reachme__section__form__input-last"
         />
         {/* <input
           type="text"

@@ -17,9 +17,11 @@ const WorksOnLanding = ({ works }) => {
 
   const loopWork = (item, index) => {
     return (
-      <div key={item.title} className="works__container">
-        <div className="languages">{item.skills.map(loopSkills)}</div>
-        <div className="works__title"> {item.title} </div>
+      <div key={item.title} className="works__display__container">
+        <div className="works__display__container__languages">
+          {item.skills.map(loopSkills)}
+        </div>
+        <div className="works__display__container__title"> {item.title} </div>
         {/* <div className="works__img"> </div> */}
       </div>
     );

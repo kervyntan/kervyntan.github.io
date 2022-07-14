@@ -1,11 +1,12 @@
 import React from "react";
 import PersonSVG from "./PersonSVG";
+import GitBranch from "./GitBranch";
 
 const GitBranchWithPerson = (props) => {
   return (
     <div className="git__branch__container">
       <PersonSVG />
-      <div className={`git__branch ${props.className}`}> </div>
+      <GitBranch className="fifty" />
     </div>
   );
 };
