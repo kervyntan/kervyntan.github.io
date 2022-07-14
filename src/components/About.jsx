@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import sun from "../assets/sun.png";
 import cloud from "../assets/cloud.png";
 import Button from "../shared/Button";
@@ -10,11 +10,57 @@ const About = () => {
   // onClick -> should:
   // 1. add a class to allow for inputto be white
   // 2. appropriate text should fade in for the specific skill
+  const [skillChecked, setSkillChecked] = useState({
+    "1": true,
+    "2": false,
+    "3": false,
+    "4": false
+  });
+  // const [skillTwoChecked, setSkillTwoChecked] = useState(false);
+  // const [skillThreeChecked, setSkillThreeChecked] = useState(false);
+  // const [skillFourChecked, setSkillFourChecked] = useState(false);
 
+  // const radios = document.getElementsByTagName("input");
+  // // console.log(radios);
+  // for (let i = 0; i < radios.length; i++) {
+  //   if (radios[i].type === "radio" && radios[i].checked) {
+  //   }
+  // }
   const showSkillHandler = (e) => {
-    console.log(e.target);
-    console.log("Hello");
-    // e.target.classList.add("selected");
+    console.log(e.target.checked);
+    if (e.target.checked) {
+      // if (e.target.id === "skill 1") {
+      //   setSkillOneChecked(!skillOneChecked);
+      // }
+      switch (e.target.id) {
+        case "skill 1":
+          setSkillChecked({ "1": true, "2": false, "3": false, "4": false });
+          break;
+        case "skill 2":
+          // setSkillTwoChecked(true);
+          // setSkillThreeChecked(false);
+          // setSkillFourChecked(false);
+          // setSkillOneChecked(false);
+          setSkillChecked({ "1": false, "2": true, "3": false, "4": false });
+          break;
+        case "skill 3":
+          // setSkillThreeChecked(true);
+          // setSkillOneChecked(false);
+          // setSkillTwoChecked(false);
+          // setSkillFourChecked(false);
+          setSkillChecked({ "1": false, "2": false, "3": true, "4": false });
+          break;
+        case "skill 4":
+          // setSkillFourChecked(true);
+          // setSkillOneChecked(false);
+          // setSkillTwoChecked(false);
+          // setSkillThreeChecked(false);
+          setSkillChecked({ "1": false, "2": false, "3": false, "4": true });
+          break;
+        default:
+          break;
+      }
+    }
   };
 
   // map method for the skills
@@ -23,25 +69,42 @@ const About = () => {
 
   const mapSkills = (item, index) => {
     // use checkbox/radio buttons to allow for switching of state
-    return (
-      <li className="skill">
-        <input
-          type="radio"
-          id={`skill ${index + 1}`}
-          name="skill"
-          value={`${index + 1}. ${item}`}
-          onClick={showSkillHandler}
-        />
-        <label for={`skill ${index + 1}`}> {`${index + 1}. ${item}`} </label>
-        <br />
-      </li>
-      // <Button
-      //   className={`btn skill ${index}`}
-      //   onClickHandler={showSkillHandler}
-      //   text={`${index + 1}. ${item}`}
-      //   type="button"
-      // />
-    );
+    if (index === 0) {
+      return (
+        <li className="skill">
+          <input
+            type="radio"
+            id={`skill ${index + 1}`}
+            name="skill"
+            value={`${index + 1}. ${item}`}
+            onClick={showSkillHandler}
+            defaultChecked
+          />
+          <label for={`skill ${index + 1}`}> {`${index + 1}. ${item}`} </label>
+          <br />
+        </li>
+      );
+    } else {
+      return (
+        <li className="skill">
+          <input
+            type="radio"
+            id={`skill ${index + 1}`}
+            name="skill"
+            value={`${index + 1}. ${item}`}
+            onClick={showSkillHandler}
+          />
+          <label for={`skill ${index + 1}`}> {`${index + 1}. ${item}`} </label>
+          <br />
+        </li>
+      );
+    }
+    // <Button
+    //   className={`btn skill ${index}`}
+    //   onClickHandler={showSkillHandler}
+    //   text={`${index + 1}. ${item}`}
+    //   type="button"
+    // />
   };
 
   return (
@@ -175,18 +238,55 @@ const About = () => {
               </div>
 
               <div className="git__branch__circle__right">
-                <p className="git__branch__circle__right__para">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde
-                  eum obcaecati ratione aliquam officiis repellat perspiciatis
-                  officia iusto tenetur. Ut quidem perferendis dolorem aliquam
-                  laborum officiis a in quibusdam molestiae.
-                </p>
-                <p className="git__branch__circle__right__para">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Aperiam soluta harum tempora? Eius sunt perspiciatis dolorem
-                  laboriosam, enim ex? Illo aspernatur corrupti placeat ipsam
-                  fugiat fugit aperiam sit, distinctio id?
-                </p>
+                {skillChecked["1"] && (
+                  <>
+                    <p className="git__branch__circle__right__para">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Unde eum obcaecati ratione aliquam officiis repellat
+                      perspiciatis officia iusto tenetur. Ut quidem perferendis
+                      dolorem aliquam laborum officiis a in quibusdam molestiae.
+                    </p>
+                    <p className="git__branch__circle__right__para">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Aperiam soluta harum tempora? Eius sunt perspiciatis
+                      dolorem laboriosam, enim ex? Illo aspernatur corrupti
+                      placeat ipsam fugiat fugit aperiam sit, distinctio id?
+                    </p>
+                  </>
+                )}
+                {skillChecked["2"] && (
+                  <>
+                    <p className="git__branch__circle__right__para">Flying</p>
+                    <p className="git__branch__circle__right__para">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Aperiam soluta harum tempora? Eius sunt perspiciatis
+                      dolorem laboriosam, enim ex? Illo aspernatur corrupti
+                      placeat ipsam fugiat fugit aperiam sit, distinctio id?
+                    </p>
+                  </>
+                )}
+                {skillChecked["3"] && (
+                  <>
+                    <p className="git__branch__circle__right__para">Three</p>
+                    <p className="git__branch__circle__right__para">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Aperiam soluta harum tempora? Eius sunt perspiciatis
+                      dolorem laboriosam, enim ex? Illo aspernatur corrupti
+                      placeat ipsam fugiat fugit aperiam sit, distinctio id?
+                    </p>
+                  </>
+                )}
+                {skillChecked["4"] && (
+                  <>
+                    <p className="git__branch__circle__right__para">Four</p>
+                    <p className="git__branch__circle__right__para">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Aperiam soluta harum tempora? Eius sunt perspiciatis
+                      dolorem laboriosam, enim ex? Illo aspernatur corrupti
+                      placeat ipsam fugiat fugit aperiam sit, distinctio id?
+                    </p>
+                  </>
+                )}
               </div>
             </div>
           </div>
