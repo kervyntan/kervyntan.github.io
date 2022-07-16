@@ -104,9 +104,9 @@ const About = () => {
   };
 
   return (
-    <div className="about">
+    <div className="about center">
       <CloudAndSun />
-      <div className="about__heading center">About Me</div>
+      <h2 className="about__heading">About Me</h2>
 
       {/* For the git branch */}
       <GitBranchWithPerson className="fifty" />
