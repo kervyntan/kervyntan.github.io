@@ -153,13 +153,8 @@ const About = () => {
               </div>
 
               <div className="git__branch__container__circle__middle">
-                {/* <div className="skill one"></div>
-                <div className="skill two"></div>
-                <div className="skill three"></div>
-                <div className="skill four"></div> */}
                 <ul className="skills__list">{arrSkills.map(mapSkills)}</ul>
               </div>
-
               <div className="git__branch__circle__right">
                 {skillChecked["1"] && (
                   <>

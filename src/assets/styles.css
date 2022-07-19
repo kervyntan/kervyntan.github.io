@@ -136,7 +136,7 @@ h3 {
 }
 
 h2,
-li:not(.skill) {
+li:not(.skill, .nav-list-hamb-item) {
   display: inline-block;
   background-image: linear-gradient(#2fb5c8, #286ede);
   background-position: left bottom;
@@ -204,6 +204,14 @@ ul li {
   color: black;
   font-weight: 400;
   letter-spacing: 0.05rem;
+}
+
+.nav-list-hamb-item > a {
+  color: black;
+}
+
+.nav-list-hamb-item > a:hover {
+  color: var(--clr-primary-about-me-btn);
 }
 
 .hamb {
@@ -468,7 +476,8 @@ li:hover {
 }
 
 .two-hundred {
-  height: 24rem;
+  /* height: 24rem; */
+  height: auto;
 }
 
 .about__section__one {
@@ -526,6 +535,11 @@ li:hover {
   margin-bottom: 1rem;
 }
 
+.git__branch__circle__right {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
 .git__branch__circle__right__para:nth-child(2) {
   margin-top: 1.5rem;
 }
@@ -534,6 +548,10 @@ li:hover {
   color: var(--clr-text);
   margin-left: 2rem;
   animation: textFadeIn 0.5s ease-in forwards;
+}
+
+.git__branch.two-hundred {
+  flex: 0 0 auto;
 }
 
 /* .btn:is(.skill),
@@ -637,8 +655,8 @@ input:checked + label {
 }
 
 @media (max-width: 768px) {
-  .nav-list-item {
-    display: none;
+  .nav-list {
+    visibility: hidden;
   }
 
   .navbar,
